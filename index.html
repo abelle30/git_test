@@ -2501,6 +2501,14 @@ img {
         border-bottom: 0;
     }
 
+    /* Show the mobile navigation when the hamburger is opened. */
+    #topcenter.mobile-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
     .mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
@@ -3449,7 +3457,7 @@ img {
          <a href="#search" class="hero-cta">Search Listings</a>
             <a href="tel:2069196886" class="hero-secondary">Call Now</a>
         </div>
-        <div class="hero-proof"><div><strong>30+</strong><span>Years local</span></div><div><strong>$28.5M</strong><span>Sales closed</span></div><div><strong>1:1</strong><span>Personal care</span></div></div>
+        <div class="hero-proof"><div><strong>28+</strong><span>Years local</span></div><div><strong>$28.5M</strong><span>Sales closed</span></div><div><strong>1:1</strong><span>Personal care</span></div></div>
     </div>
    
 </div>
@@ -3489,7 +3497,7 @@ img {
 
 <main class="realty-page" id="home">
     <!-- About the agent -->
-    <section class="section about-section" id="about"><div class="realty-inner about-grid"><div class="about-copy"><div class="realty-kicker">Meet Your Realtor</div><h2>MARCI METZGER</h2><p>With nearly <strong>30 years of dedicated experience</strong>, Marci has guided countless clients through property transactions with a focus on their unique needs. Her expertise spans residential and commercial properties, offering comprehensive support for first-time buyers, seasoned investors, and sellers alike. Marci is committed to building lasting relationships through trust and transparency, leveraging her deep market understanding and negotiation skills to ensure a smooth, rewarding journey and establish herself as your ideal real estate partner.</p><div class="about-contact"><a href="tel:2069196886"><i class="fa fa-phone" aria-hidden="true"></i> (206) 919-6886</a><a href="mailto:marcimetzger@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> marcimetzger@gmail.com</a></div><div class="about-stats"><div class="about-stat"><strong>30+</strong><span>Years local</span></div><div class="about-stat"><strong>1:1</strong><span>Personal service</span></div><div class="about-stat"><strong>100%</strong><span>In your corner</span></div></div></div><div class="about-profile"><div class="about-photo"><img src="https://marci-metzger-redesign.vercel.app/images/marci-photo.jpg" alt="Marci Metzger, real estate professional"></div></div></div></div></section>
+    <section class="section about-section" id="about"><div class="realty-inner about-grid"><div class="about-copy"><div class="realty-kicker">Meet Your Realtor</div><h2>MARCI METZGER</h2><p>With nearly <strong>30 years of dedicated experience</strong>, Marci has guided countless clients through property transactions with a focus on their unique needs. Her expertise spans residential and commercial properties, offering comprehensive support for first-time buyers, seasoned investors, and sellers alike. Marci is committed to building lasting relationships through trust and transparency, leveraging her deep market understanding and negotiation skills to ensure a smooth, rewarding journey and establish herself as your ideal real estate partner.</p><div class="about-contact"><a href="tel:2069196886"><i class="fa fa-phone" aria-hidden="true"></i> (206) 919-6886</a><a href="mailto:marcimetzger@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> marcimetzger@gmail.com</a></div><div class="about-stats"><div class="about-stat"><strong>28+</strong><span>Years local</span></div><div class="about-stat"><strong>1:1</strong><span>Personal service</span></div><div class="about-stat"><strong>100%</strong><span>In your corner</span></div></div></div><div class="about-profile"><div class="about-photo"><img src="https://marci-metzger-redesign.vercel.app/images/marci-photo.jpg" alt="Marci Metzger, real estate professional"></div></div></div></div></section>
 
     <!-- Get It SOLD -->
     <section class="section sold-section" id="get-it-sold">
@@ -3510,7 +3518,7 @@ img {
             <div class="sold-stats" aria-label="Marci Metzger sales achievements">
                 <div class="sold-stat"><i class="fa fa-users" aria-hidden="true"></i><strong>90</strong><span>Happy Clients in 2021</span></div>
                 <div class="sold-stat"><i class="fa fa-usd" aria-hidden="true"></i><strong>28.5M</strong><span>Closed Sales</span></div>
-                <div class="sold-stat"><i class="fa fa-calendar" aria-hidden="true"></i><strong>30+</strong><span>Years of Excellence</span></div>
+                <div class="sold-stat"><i class="fa fa-calendar" aria-hidden="true"></i><strong>28</strong><span>Years of Excellence</span></div>
                 <div class="sold-stat"><i class="fa fa-star" aria-hidden="true"></i><strong>100%</strong><span>Client Satisfaction</span></div>
             </div>
            
@@ -3796,9 +3804,9 @@ img {
             <div class="footer-organized-bottom">
                 <div class="footer-organized-legal"><span>© 2026 Marci Metzger Homes. All rights reserved.</span><a href="https://policies.google.com/privacy">Privacy</a><a href="https://policies.google.com/terms">Terms</a></div>
                 <div class="footer-organized-social" aria-label="Social media">
-                    <a class="social-button" href="https://www.facebook.com/MarciHomes/" aria-label="Facebook" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a class="social-button" href="https://www.instagram.com/marcimetzger_theridge/" aria-label="Instagram" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a class="social-button" href="https://www.linkedin.com/in/marci-metzger-30642496" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a class="social-button" href="https://www.facebook.com/" aria-label="Facebook" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="social-button" href="https://www.instagram.com/" aria-label="Instagram" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="social-button" href="https://www.linkedin.com/" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -4022,10 +4030,12 @@ document.getElementById('contact-form').addEventListener('submit',function(event
     function closeNav(){
         nav.classList.remove('mobile-open');
         toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-label','Open navigation');
     }
     toggle.addEventListener('click', function(){
         var open = nav.classList.toggle('mobile-open');
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     });
     nav.querySelectorAll('a').forEach(function(link){
         link.addEventListener('click', closeNav);
